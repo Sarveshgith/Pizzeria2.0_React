@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Pizzeria2.0_React/static/css/main.305b263a.css",
+    "main.js": "/Pizzeria2.0_React/static/js/main.d7019e62.js",
+    "static/media/bg.png": "/Pizzeria2.0_React/static/media/bg.3d421b1b5682e1b67deb.png",
+    "static/media/gallb05.jpg": "/Pizzeria2.0_React/static/media/gallb05.990517e9fb2db861e617.jpg",
+    "static/media/gallb01.jpg": "/Pizzeria2.0_React/static/media/gallb01.9dc1a24ea4d2f0d45953.jpg",
+    "static/media/sign1.png": "/Pizzeria2.0_React/static/media/sign1.ff3734642ac13b5da609.png",
+    "static/media/gallt04.jpg": "/Pizzeria2.0_React/static/media/gallt04.c3f6a632b318c3fa9962.jpg",
+    "static/media/headermain.jpg": "/Pizzeria2.0_React/static/media/headermain.e8e118dfa0b6f3f37463.jpg",
+    "static/media/gallt02.jpg": "/Pizzeria2.0_React/static/media/gallt02.763c74c1d81b5e280aa6.jpg",
+    "static/media/gallt05.jpg": "/Pizzeria2.0_React/static/media/gallt05.fa1563651c3fb71e360b.jpg",
+    "static/media/gallb03.jpg": "/Pizzeria2.0_React/static/media/gallb03.f0b6eebf990c6c251390.jpg",
+    "static/media/final01.jpg": "/Pizzeria2.0_React/static/media/final01.3d37391f4b36c5dfc217.jpg",
+    "static/media/gallb04.jpg": "/Pizzeria2.0_React/static/media/gallb04.a6aa47d069833175d048.jpg",
+    "static/media/pngegg.png": "/Pizzeria2.0_React/static/media/pngegg.08ac7e724d4a26460b03.png",
+    "static/media/pngegg (2).png": "/Pizzeria2.0_React/static/media/pngegg (2).4f21cc2c79dc2f336730.png",
+    "static/media/pngegg (1).png": "/Pizzeria2.0_React/static/media/pngegg (1).93d9cacf4c2f55015aa4.png",
+    "static/media/knife.png": "/Pizzeria2.0_React/static/media/knife.1121c0a5afb62acb31cb.png",
+    "static/media/gallt03.jpeg": "/Pizzeria2.0_React/static/media/gallt03.91b7de8de8d72da2e57a.jpeg",
+    "static/media/papa.jpeg": "/Pizzeria2.0_React/static/media/papa.ee850bf3d8658ac8a828.jpeg",
+    "static/media/sign3.png": "/Pizzeria2.0_React/static/media/sign3.b43f762f8fdb62f0cd5d.png",
+    "static/media/gallb02.jpg": "/Pizzeria2.0_React/static/media/gallb02.12df9a749a061141c75f.jpg",
+    "static/media/gallt01.jpg": "/Pizzeria2.0_React/static/media/gallt01.ebb70e7e26f1c6e1dea0.jpg",
+    "static/media/sign2.png": "/Pizzeria2.0_React/static/media/sign2.3f38c5608bc0d7dbc06a.png",
+    "index.html": "/Pizzeria2.0_React/index.html",
+    "main.305b263a.css.map": "/Pizzeria2.0_React/static/css/main.305b263a.css.map",
+    "main.d7019e62.js.map": "/Pizzeria2.0_React/static/js/main.d7019e62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.305b263a.css",
+    "static/js/main.d7019e62.js"
+  ]
+}
