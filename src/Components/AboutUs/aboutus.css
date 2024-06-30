@@ -1,0 +1,135 @@
+.aboutus__wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.aboutus__wrapper .overlay{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.aboutus__wrapper .icon{
+    position: absolute;
+    font-size: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(30, 30, 30, 0.5);
+}
+
+.aboutus__content{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+.aboutus__content1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.aboutus__content2{
+    margin: 1rem 2rem;
+}
+
+.aboutus__content2 img{
+    height: 700px;
+    width: auto;
+}
+
+.aboutus__content3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+@media screen and (max-width: 1500px) {
+    .aboutus__content2 img{
+        height: 600px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .aboutus__content2 img{
+        height: 500px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .aboutus__wrapper .icon{
+        font-size: 500px;
+    }
+
+    .aboutus__content2 img{
+        height: 400px;
+        width: 100%;
+        }
+
+        .aboutus__wrapper .overlay{
+            min-height: 70vh;
+        }
+}
+
+@media screen and (max-width: 890px) {
+    .aboutus__wrapper .icon{
+        font-size: 400px;
+    }
+
+    .aboutus__content1 .aboutus__title, .aboutus__content3 .aboutus__title{
+        font-size: 40px;
+    }
+
+    .aboutus__content1 .p__opensans, .aboutus__content3 .p__opensans{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .aboutus__content2 img{
+        height: 300px;
+        width: 100%;
+        }
+
+        .aboutus__wrapper .overlay{
+            min-height: 60vh;
+        }
+
+        .aboutus__content1 .p__opensans, .aboutus__content3 .p__opensans {
+            font-size: 12px;
+        }
+}
+
+@media screen and (max-width: 450px) {
+    .aboutus__content2 img{
+        display: none;
+    }
+
+    .aboutus__content{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .aboutus__wrapper .overlay{
+        min-height: 80vh;
+    }
+    
+}

@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app__header_h1 {
+  font-family: "Cormorant Upright", serif;
+  color: #dcca87;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 91px;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.headtext__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-size: 64px;
+  line-height: 83.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+
+.custom__button {
+  background-color: #ccbb80;
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 18px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom__button:hover {
+  background-color: var(--color-black);
+  color: var(--color-crimson);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.p__cormorant {
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-feature-settings: "tnum" on, "lnum" on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+.p__opensans {
+  font-family: var(--font-alt);
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.search__bar input {
+  width: 620px;
+  border: 1px solid var(--color-golden);
+  border-radius: 2px;
+  font-size: 1rem;
+  font-family: var(--font-base);
+  color: var(--color-white);
+
+  margin-right: 2rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-black);
+}
+
+@media screen and (max-width: 850px) {
+  .headtext__cormorant {
+    font-size: 48px;
+    line-height: 62.4px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 650px) {
+  .headtext__cormorant {
+    font-size: 36px;
+    line-height: 46.8px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 450px) {
+  .headtext__cormorant {
+    font-size: 24px;
+    line-height: 31.2px;
   }
 }

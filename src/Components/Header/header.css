@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+.header{
+    background-color: #0C0C0C;
+    min-height: 90vh;
+}
+
+.app__header{
+    margin: 0 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.app__wrapper_info{
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.app__header-img{
+    flex:1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 790px) {
+    
+    .app__header-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    
+    .app__header_h1{
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .app__header{
+        margin: 0 3rem;
+    }
+
+    .header{
+        min-height: 50vh;
+    }
+}

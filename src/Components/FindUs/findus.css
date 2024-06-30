@@ -1,0 +1,50 @@
+.findus-content {
+  position: relative;
+}
+
+.findus-content .overlay {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+}
+
+.findus-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 90%;
+  width: 100%;
+}
+
+.findus-img {
+  height: auto;
+  width: 550px;
+}
+
+.findus-content-left {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .findus-img {
+    height: auto;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .findus-img {
+    display: none;
+  }
+
+  .findus-content .overlay {
+    min-height: 80vh;
+  }
+}
+
+
