@@ -1,11 +1,21 @@
+.app__gallery {
+  background-color: #0c0c0c;
+  padding: 4rem 0;
+}
+
 .app__gallery-content {
   position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .app__gallery-content .overlay {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  object-fit: cover;
 }
 
 .app__gallery-content-text {
@@ -16,21 +26,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  max-width: 90%;
+  justify-content: space-between;
   width: 100%;
-}
-
-.gallery-images__container:hover .gallery-images__arrow {
-  opacity: 1;
-}
-
-.headtext__cormorant {
-  margin-top: 0.5rem;
-}
-
-.p__opensans {
-  margin-bottom: 1.5rem;
+  gap: 2rem;
 }
 
 .gallery-content-left {
@@ -41,7 +39,6 @@
   justify-content: flex-start;
   position: relative;
   max-width: 45%;
-  margin-right: 1rem;
 }
 
 .gallery-content-right {
@@ -61,6 +58,8 @@
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 .gallery-images__container::-webkit-scrollbar {
@@ -71,7 +70,14 @@
   position: relative;
   min-width: 301px;
   height: 447px;
-  margin-right: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery_image-card:hover {
+  transform: scale(1.02);
 }
 
 .gallery_image {
@@ -80,7 +86,6 @@
   object-fit: cover;
   opacity: 1;
   transition: 0.5s ease;
-  object-fit: contain;
 }
 
 .gallery_image:hover {
@@ -91,12 +96,29 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-images__container:hover .gallery-images__arrow {
+  opacity: 1;
 }
 
 .gallery-images__arrow-icon {
   cursor: pointer;
   font-size: 2rem;
   color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gallery-images__arrow-icon:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
 }
 
 .gallery_image-icon {
@@ -106,57 +128,86 @@
   transform: translate(-50%, -50%);
   color: #fff;
   opacity: 0;
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
 }
 
 .gallery_image-card:hover .gallery_image-icon {
   opacity: 1;
 }
 
-@media (max-width: 650px) {
-  .app__gallery-content .overlay {
-    min-height: 80vh;
+@media screen and (max-width: 1150px) {
+  .app__gallery-content {
+    padding: 0 1.5rem;
+  }
+
+  .gallery_image-card {
+    min-width: 250px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .app__gallery {
+    padding: 3rem 0;
+  }
+
+  .app__gallery-content-text {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .gallery-content-left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gallery-content-right {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .gallery_image-card {
+    min-width: 200px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__gallery {
+    padding: 2rem 0;
+  }
+
+  .app__gallery-content {
+    padding: 0 1rem;
   }
 
   .gallery-images__arrow {
     display: none;
   }
+
+  .gallery_image-card {
+    min-width: 180px;
+    height: 270px;
+  }
 }
 
-@media (max-width: 450px) {
-  .app__gallery-content .overlay {
-    min-height: 150vh;
+@media screen and (max-width: 450px) {
+  .app__gallery {
+    padding: 1.5rem 0;
   }
 
-  @media (max-width: 450px) {
-    .app__gallery-content-text {
-      flex-direction: column;
-      padding: 1rem;
-    }
+  .app__gallery-content {
+    padding: 0 0.5rem;
+  }
 
-    .gallery-content-left {
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 1rem; /* Add some spacing at the bottom */
-    }
+  .gallery_image-card {
+    min-width: 150px;
+    height: 225px;
+  }
 
-    .gallery-content-right {
-      max-width: 100%;
-      margin: 0 1rem; /* Add margins to the left and right */
-      justify-content: center; /* Center the right content */
-    }
-
-    .gallery_image-card {
-      min-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .gallery_image-icon {
-      font-size: 1.5rem; /* Adjust the icon size for smaller screens */
-    }
-
-    .gallery-images__arrow-icon {
-      font-size: 1.5rem; /* Adjust arrow size for smaller screens */
-    }
+  .gallery_image-icon {
+    font-size: 1.5rem;
   }
 }

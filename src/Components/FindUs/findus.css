@@ -1,11 +1,16 @@
 .findus-content {
   position: relative;
+  background-color: #0c0c0c;
+  min-height: 100vh;
+  padding: 4rem 0;
 }
 
 .findus-content .overlay {
   min-height: 100vh;
   height: auto;
   width: 100%;
+  object-fit: cover;
+  opacity: 0.1;
 }
 
 .findus-container {
@@ -16,35 +21,102 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  max-width: 90%;
+  justify-content: space-between;
+  max-width: 1400px;
   width: 100%;
-}
-
-.findus-img {
-  height: auto;
-  width: 550px;
+  padding: 0 2rem;
+  gap: 4rem;
 }
 
 .findus-content-left {
-  margin-left: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+.findus-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.findus-img img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.findus-img img:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 1150px) {
+  .findus-content {
+    padding: 3rem 0;
+  }
+
+  .findus-container {
+    padding: 0 1.5rem;
+    gap: 3rem;
+  }
+
+  .findus-img img {
+    max-width: 450px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-  .findus-img {
-    height: auto;
-    width: 400px;
+  .findus-content {
+    padding: 2rem 0;
+  }
+
+  .findus-container {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .findus-content-left {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .findus-img img {
+    max-width: 400px;
   }
 }
 
 @media screen and (max-width: 650px) {
+  .findus-content {
+    padding: 1.5rem 0;
+  }
+
+  .findus-container {
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+
   .findus-img {
     display: none;
   }
-
-  .findus-content .overlay {
-    min-height: 80vh;
-  }
 }
 
+@media screen and (max-width: 450px) {
+  .findus-content {
+    padding: 1rem 0;
+  }
 
+  .findus-container {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+}

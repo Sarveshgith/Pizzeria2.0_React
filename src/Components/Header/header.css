@@ -1,55 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-.header{
-    background-color: #0C0C0C;
-    min-height: 90vh;
+.header {
+  background-color: #0c0c0c;
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed navbar */
 }
 
-.app__header{
-    margin: 0 5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.app__header {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
-.app__wrapper_info{
-    flex: 1;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
+.app__wrapper_info {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.app__header-img {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.app__header-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__header {
+    padding: 0 1.5rem;
+  }
+
+  .app__header-img img {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    min-height: 80vh;
+  }
+
+  .app__header {
     flex-direction: column;
-    margin-top: 2rem;
-}
+    text-align: center;
+    padding: 0 1rem;
+  }
 
-.app__header-img{
-    flex:1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .app__wrapper_info {
     align-items: center;
-    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .app__header-img {
+    margin-left: 0;
     margin-top: 2rem;
+  }
+
+  .app__header-img img {
+    max-width: 350px;
+  }
 }
 
-@media screen and (max-width: 790px) {
-    
-    .app__header-img{
-        display: none;
-    }
+@media screen and (max-width: 650px) {
+  .header {
+    min-height: 70vh;
+  }
+
+  .app__header {
+    padding: 0 0.5rem;
+  }
+
+  .app__header-img img {
+    max-width: 300px;
+  }
 }
 
-@media screen and (max-width: 470px) {
-    
-    .app__header_h1{
-        font-size: 40px;
-        line-height: 60px;
-    }
+@media screen and (max-width: 450px) {
+  .header {
+    min-height: 60vh;
+  }
 
-    .app__header{
-        margin: 0 3rem;
-    }
-
-    .header{
-        min-height: 50vh;
-    }
+  .app__header-img img {
+    max-width: 250px;
+  }
 }

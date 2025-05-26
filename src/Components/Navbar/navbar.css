@@ -1,176 +1,230 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-.app__navbar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0C0C0C;
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0c0c;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: none;
 }
 
 .p__opensans {
-    font-family: 'Open Sans', sans-serif;
-    color: #FFFFFF;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    line-height: 28px;
-    font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.app__navbar__logo {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.app__navbar-links li,
+.app__navbar-login a {
+  margin: 0 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding-bottom: 0.5rem; /* Add padding for spacing */
+  position: relative; /* Ensure pseudo-elements are positioned relative to the li */
+}
+
+.app__navbar-links li:hover,
+.app__navbar-login a:hover {
+  border-bottom: 2px solid #dcca87;
+  color: #dcca87; /* Change the text color on hover */
+  transform: translateY(-3px); /* Slightly lift the element on hover */
+}
+
+/* Optional: Add a subtle underline animation */
+.app__navbar-links li::after,
+.app__navbar-login a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #dcca87;
+  transition: width 0.4s ease;
+}
+
+.app__navbar-links li:hover::after,
+.app__navbar-login a:hover::after {
+  width: 100%;
+}
+
+.app__navbar-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.app__navbar-login a {
+  margin: 0 2rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.app__navbar-login a:hover {
+  border-bottom: 2px solid #dcca87;
+}
+
+.app__navbar-smscreen {
+  display: none;
+}
+
+.app__navbar-smscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(12, 12, 12, 0.95);
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+  backdrop-filter: blur(5px);
+}
+
+.app__navbar-smscreen .burger {
+  margin: 1rem 2rem;
+}
+
+.app__navbar-smscreen_overlay .overlay__close {
+  font-size: 27px;
+  color: #dcca87;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.app__navbar-smscreen-links {
+  list-style: none;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app__navbar-smscreen-links li {
+  margin: 0;
+  cursor: pointer;
+  color: #dcca87;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Cormorant Upright', serif;
+  transition: all 0.3s ease;
+}
+
+.app__navbar-smscreen-links li:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.app__navbar-smscreen-links .phone {
+  display: none;
+}
+
+@media screen and (max-width: 2000px) {
+  .app__navbar {
+    padding: 0.5rem 4rem;
   }
 
-  .logo{
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
-    font-style: normal;
-    color: #FFFFFF;
+  .app__navbar__logo .logo {
     font-size: 35px;
   }
+}
 
-  .app__navbar__logo{
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
+@media screen and (max-width: 1150px) {
+  .app__navbar {
+    padding: 0.5rem 2rem;
   }
 
-  .app__navbar-links{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    list-style: none;
-  }
-
-  .app__navbar-links li, .app__navbar-login a {
-    margin: 0 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    padding-bottom: 0.5rem; /* Add padding for spacing */
-    position: relative; /* Ensure pseudo-elements are positioned relative to the li */
-  }
-  
-  .app__navbar-links li:hover, .app__navbar-login a:hover {
-    border-bottom: 2px solid #DCCA87;
-    color: #DCCA87; /* Change the text color on hover */
-    transform: translateY(-3px); /* Slightly lift the element on hover */
-  }
-  
-  /* Optional: Add a subtle underline animation */
-  .app__navbar-links li::after, .app__navbar-login a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #DCCA87;
-    transition: width 0.4s ease;
-  }
-  
-  .app__navbar-links li:hover::after, .app__navbar-login a:hover::after{
-    width: 100%;
-  }
-  
-
-  .app__navbar-login {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .app__navbar-login a{
-    margin: 0 2rem;
-    text-decoration: none;
-    transition: 0.5s ease;
-  }
-
-  .app__navbar-login a:hover{
-    border-bottom: 2px solid #DCCA87;
-  }
-
-  .app__navbar-smscreen{
+  .app__navbar-links {
     display: none;
   }
 
-  .app__navbar-smscreen_overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #0C0C0C;
-    transition: 0.5s ease;
-
-    flex-direction: column;
-    z-index: 5;
+  .app__navbar-smscreen {
+    display: flex;
   }
 
-  .app__navbar-smscreen .burger{
-    margin: 1rem 2rem;
+  .app__navbar__logo .logo {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__navbar {
+    padding: 0.5rem 1rem;
   }
 
-    .app__navbar-smscreen_overlay .overlay__close{
-        font-size: 27px;
-        color: #DCCA87;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
+  .app__navbar-login {
+    display: none;
+  }
 
-    .app__navbar-smscreen-links{
-        list-style: none;
-        margin-top: 120px;
-    }
+  .app__navbar__logo .logo {
+    font-size: 25px;
+  }
 
-    .app__navbar-smscreen-links li{
-        margin: 2rem;
-        cursor: pointer;
-        color:#DCCA87;
-        font-size: 2rem;
-        text-align: center;
-        font-family: 'Cormorant Upright', serif;
-        justify-content: center;
-    }
+  .app__navbar-smscreen-links {
+    margin-top: 60px;
+  }
 
-    .app__navbar-smscreen-links li:hover{
-        color: #FFFFFF;
-    }
+  .app__navbar-smscreen-links li {
+    font-size: 1.2rem;
+  }
 
-    .app__navbar-smscreen-links .phone{
-        display: none;
-    }
-    
-@media screen and (max-width: 2000px){
-    .app__navbar__logo .logo{
-        width: 210px;
-    }
+  .app__navbar-smscreen-links .phone {
+    display: flex;
+    margin-top: 1rem;
+  }
 }
 
-@media screen and (max-width: 1150px){
-    .app__navbar-links{
-        display: none;
-    }
+@media screen and (max-width: 450px) {
+  .app__navbar {
+    padding: 0.5rem 0.5rem;
+  }
 
-    .app__navbar-smscreen{
-        display: flex;
-    }
-}
+  .app__navbar__logo .logo {
+    font-size: 22px;
+  }
 
-@media screen and (max-width: 650px){
-    .app__navbar-login{
-        display: none;
-    }
-
-    .app__navbar__logo .logo{
-        font-size: 30px;
-    }
-
-    .app__navbar-smscreen-links .phone{
-        display: flex;
-    }
+  .app__navbar-smscreen-links li {
+    font-size: 1rem;
+  }
 }
